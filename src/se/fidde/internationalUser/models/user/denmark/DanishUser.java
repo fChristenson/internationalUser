@@ -1,21 +1,17 @@
 package se.fidde.internationalUser.models.user.denmark;
 
+import se.fidde.internationalUser.models.user.BaseUser;
 import se.fidde.internationalUser.models.user.User;
 
-public class DanishUser {
-	private final User user;
+public class DanishUser extends BaseUser {
 	private final DanishUserData danishUserData;
 	
 	public DanishUser(User user, DanishUserData danishUserData) {
-		this.user = user;
+		super(user.getEmailAddress(), user.getAddress());
 		this.danishUserData = danishUserData;
 	}
 
-	public User getUser() {
-		return user;
-	}
-
-	public DanishUserData getSwedishUserData() {
-		return danishUserData;
+	public DanishPersonalNumber getPersonalNumber() {
+		return this.danishUserData.getPersonalNumber();
 	}
 }

@@ -1,6 +1,6 @@
 package se.fidde.internationalUser.models.user;
 
-abstract class BaseUser {
+public abstract class BaseUser {
 	private final UserId id; // userId has the same rules for everyone
 	private final Address address; // address has the same rules for everyone
 	private final EmailAddress emailAddress; // email has the same rules for everyone
